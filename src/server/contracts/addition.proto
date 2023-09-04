@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AdditionService {
+  rpc addition(NumberParams) returns (NumberResult) {}
+}
+
+message NumberParams {
+    double fNumber = 1;
+    double sNumber = 2;
+}
+
+message NumberResult {
+    double result = 1;
+}

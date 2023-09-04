@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service CalculatorService {
+  rpc addition(NumberParams) returns (NumberResult) {}
+  rpc subtraction(NumberParams) returns (NumberResult) {}
+  rpc multiplication(NumberParams) returns (NumberResult) {}
+  rpc division(NumberParams) returns (NumberResult) {}
+}
+
+message NumberParams {
+    double fNumber = 1;
+    double sNumber = 2;
+}
+
+message NumberResult {
+    double result = 1;
+}
